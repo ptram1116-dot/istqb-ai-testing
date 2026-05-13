@@ -110,6 +110,7 @@ table.styled tr:nth-child(even){background:#f9f9f9;}
   <button class="nav-btn" onclick="showSection('sample2')">📄 Sample v2.0</button>
   <button class="nav-btn" onclick="showSection('sample3')">📄 ASTQB v1.0</button>
   <button class="nav-btn" onclick="showSection('sample4')">📄 ASTQB v2.0</button>
+  <button class="nav-btn" onclick="showSection('glossary')">📖 Glossary Ch.9</button>
 </nav>
 <div class="container">
 <!-- OVERVIEW -->
@@ -2641,6 +2642,1067 @@ Kiểm thử tập trung vào xác minh MLS có thể được triển khai đú
 <div class="question-block"><div class="q-header"><span class="q-num">Q35</span><span class="q-points">1 pt</span><div class="q-text">What type of drift testing depends on the current ground truth being known?</div></div><ul class="options"><li onclick="selectOption(this)">a) Concept drift</li><li onclick="selectOption(this)">b) Data drift</li><li onclick="selectOption(this)">c) Dynamic drift</li><li onclick="selectOption(this)">d) Static drift</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: a) Concept drift — from official ASTQB v2.0 Q35</div><div class="ans-vi">Đáp án đúng: a) Concept drift — phụ thuộc vào việc biết ground truth hiện tại để xác định liệu mối quan hệ đầu vào-đầu ra có thay đổi không</div><div class="just">From ASTQB v2.0 Q35. Concept drift detection depends on knowing the current ground truth — you need to know what the "correct" output should be now to determine if the input-output relationship has changed (AI-6.1.7 K2).</div></div></div>
 <div class="question-block"><div class="q-header"><span class="q-num">Q36</span><span class="q-points">1 pt</span><div class="q-text">Which of the following statements about A/B testing in the ML context is CORRECT?</div></div><ul class="options"><li onclick="selectOption(this)">a) A/B testing compares two versions of a model by running them on the same test dataset</li><li onclick="selectOption(this)">b) A/B testing compares two versions of a model by routing live user traffic to both versions</li><li onclick="selectOption(this)">c) A/B testing is the same as back-to-back testing using a pseudo-oracle</li><li onclick="selectOption(this)">d) A/B testing is only applicable when deploying a model for the first time</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: b) — from official ASTQB v2.0 Q36</div><div class="ans-vi">Đáp án đúng: b) A/B testing so sánh hai phiên bản mô hình bằng cách định tuyến lưu lượng người dùng thực đến cả hai phiên bản — từ ASTQB v2.0 chính thức</div><div class="just">From ASTQB v2.0 Q36. A/B testing: routes live user traffic to both versions simultaneously; measures actual user behavior with each model version (AI-6.1.9 K2).</div></div></div>
 </div></div></section>
+
+<section id="glossary" class="day-section">
+<div class="day-header"><div class="day-number" style="font-size:1.1rem;padding:0.4rem;">CH.9</div><div class="day-info"><h2>AI-Specific Terms — Chapter 9 Glossary (K1/K2)</h2><div class="chapter-ref">CHƯƠNG 9 · Bắt buộc K1 · Có thể ra thi K2 · Wording chính xác theo syllabus v2.0</div></div></div>
+<div class="day-body">
+<div class="section-title">📖 Hướng dẫn sử dụng</div>
+<div style="background:#1a1f2e;border:1px solid #2d3748;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.9rem;line-height:1.7;color:#e2e8f0;">
+Syllabus §0.5: <em>"For all terms listed as keywords just below chapter headings, the correct name and definition <strong>shall be remembered (K1)</strong>, even if not explicitly mentioned in the learning objective."</em><br>
+Exam Rules v1.2 (May 2025): <em>"Glossary terms are examined with <strong>K2-level questions</strong>."</em><br><br>
+📌 Cách dùng section này: Đọc thuật ngữ tiếng Anh → Tự nhớ định nghĩa → Click vào phần <strong>🇻🇳 Tiếng Việt</strong> bên dưới mỗi term để kiểm tra. Tất cả định nghĩa tiếng Anh là <strong>wording chính xác từ syllabus v2.0</strong>.
+</div>
+
+<div class="section-title">🃏 Flashcard Drill — 10 Random Terms</div>
+<div style="margin-bottom:1.5rem;">
+<style>
+.fc-board{padding:.5rem 0;}
+.fc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px;}
+.fc-title-label{font-size:14px;font-weight:500;color:var(--c-text,#1a202c);}
+.fc-meta{font-size:12px;color:#718096;}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px;}
+.fc-card{position:relative;height:160px;cursor:pointer;perspective:700px;}
+.fc-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.4,0,.2,1);}
+.fc-card.flipped .fc-inner{transform:rotateY(180deg);}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;border:1px solid #e2e8f0;padding:10px;display:flex;flex-direction:column;}
+.fc-front{background:#fff;justify-content:space-between;}
+.fc-back{background:#f7fafc;transform:rotateY(180deg);justify-content:flex-start;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e0 transparent;}
+.fc-term{font-size:13px;font-weight:600;color:#2d3748;line-height:1.4;margin-top:6px;}
+.fc-hint{font-size:10px;color:#a0aec0;}
+.fc-chapter-chip{font-size:10px;font-weight:600;padding:2px 6px;border-radius:5px;display:inline-block;}
+.fc-def-label{font-size:9px;font-weight:700;color:#a0aec0;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px;}
+.fc-def-en{font-size:10.5px;color:#2d3748;line-height:1.45;margin-bottom:4px;}
+.fc-def-vi{font-size:10px;color:#4a5568;line-height:1.45;border-top:1px solid #e2e8f0;padding-top:4px;}
+.fc-btn{background:#fff;border:1px solid #e2e8f0;border-radius:7px;padding:6px 12px;font-size:12px;cursor:pointer;color:#4a5568;}
+.fc-btn:hover{background:#f7fafc;}
+.fc-stats{font-size:11px;color:#718096;margin-top:8px;}
+.fc-stats strong{color:#2d3748;}
+</style>
+<div class="fc-board">
+<div class="fc-header">
+  <div>
+    <div class="fc-title-label">Click thẻ để lật — xem định nghĩa EN + VI</div>
+    <div class="fc-meta" id="fc-meta-hint">10 thuật ngữ ngẫu nhiên từ 70+ terms trong Ch.9</div>
+  </div>
+  <button class="fc-btn" onclick="fcReshuffle()">🔀 Bộ thẻ mới</button>
+</div>
+<div class="fc-grid" id="fc-grid"></div>
+<div class="fc-stats">
+  Đã lật: <strong id="fc-flipped">0</strong>/10 &nbsp;|&nbsp;
+  Còn lại: <strong id="fc-remain">10</strong>
+  &nbsp;&nbsp;
+  <button class="fc-btn" onclick="fcFlipAll(true)" style="padding:3px 8px;font-size:11px;">Lật tất cả</button>
+  <button class="fc-btn" onclick="fcFlipAll(false)" style="padding:3px 8px;font-size:11px;">Đặt lại</button>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+const FC_TERMS=[
+{term:"accuracy",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"The ML functional performance metric used to evaluate a classifier, which measures the proportion of predictions that were correct. (ISO/IEC TR 29119-11)",
+ vi:"Tỷ lệ dự đoán đúng / tổng số. Công thức: (TP+TN)/Tổng. Chỉ đáng tin cậy khi tập cân bằng."},
+{term:"activation function",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"The formula associated with a neuron in a neural network that determines the output of the neuron from the inputs to the neuron.",
+ vi:"Hàm xác định đầu ra nơ-ron từ đầu vào. Phải phi tuyến để DNN học được mẫu phức tạp."},
+{term:"adaptive AI-based system",ch:"Ch.4",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"An AI-based system that adjusts its behavior in response to changes in its operational environment.",
+ vi:"Hệ thống AI điều chỉnh hành vi sau triển khai. Khó kiểm thử hơn locked AI-based system."},
+{term:"adversarial attack",ch:"Ch.6",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"The deliberate use of adversarial examples to cause an ML model to fail.",
+ vi:"Dùng ví dụ đối nghịch để khiến mô hình thất bại. Mục tiêu: cải thiện AI Robustness."},
+{term:"AI as a Service",ch:"Ch.1",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"A software licensing and delivery model in which AI and AI development services are centrally hosted.",
+ vi:"AI lưu trữ tập trung. 3 rủi ro kiểm thử: vendor lock-in, data privacy, model transparency."},
+{term:"algorithmic bias",ch:"Ch.5",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"A type of bias caused by the ML algorithm.",
+ vi:"Thiên kiến do chính thuật toán gây ra — phân biệt với data bias (do dữ liệu huấn luyện)."},
+{term:"annotation",ch:"Ch.5",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The activity of identifying objects in images with bounding boxes to provide labelled data for classification.",
+ vi:"Gán nhãn dữ liệu bằng bounding box. Cơ sở của học có giám sát. Lỗi annotation → model học sai."},
+{term:"artificial intelligence",ch:"Ch.1",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"The capability of an engineered system to acquire, process, create and apply knowledge and skills. (ISO/IEC TR 29119-11)",
+ vi:"Khả năng của hệ thống kỹ thuật thu nhận, xử lý, tạo ra và áp dụng kiến thức và kỹ năng."},
+{term:"association",ch:"Ch.1",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An unsupervised ML learning technique that identifies relationships and dependencies between samples.",
+ vi:"Học không giám sát tìm mối quan hệ giữa các mẫu. Ví dụ: market basket analysis."},
+{term:"augmentation",ch:"Ch.5",color:"#EAF3DE",border:"#639922",text:"#27500A",
+ en:"The activity of creating new data points based on an existing dataset.",
+ vi:"Tạo điểm dữ liệu mới từ tập có sẵn. Ví dụ: lật/xoay ảnh để tăng tập huấn luyện."},
+{term:"Bayesian model",ch:"Ch.3",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"A statistical model that uses probability to represent the uncertainty of both model inputs and outputs.",
+ vi:"Mô hình thống kê dùng xác suất biểu diễn sự không chắc chắn của đầu vào và đầu ra."},
+{term:"bias",ch:"Ch.5",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"The systematic difference in treatment of certain objects, people or groups in comparison to others. (ISO/IEC TR 24027)",
+ vi:"Sự khác biệt có hệ thống trong cách đối xử. ⚠️ Khác 'bias' kỹ thuật của nơ-ron trong DNN."},
+{term:"big data",ch:"Ch.1",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"Extensive datasets whose characteristics in terms of volume, variety, velocity and/or variability require specialized technologies to process.",
+ vi:"Tập dữ liệu khổng lồ. 4V: Volume, Variety, Velocity, Variability."},
+{term:"bootstrap technique",ch:"Ch.3",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"A resampling technique that repeatedly draws samples with replacement from a training dataset to estimate ML functional performance criteria.",
+ vi:"Lấy mẫu có hoàn lại để ước tính hiệu suất mô hình. Thay thế k-fold khi dữ liệu rất ít."},
+{term:"concept drift",ch:"Ch.6",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"A change in the perceived functional performance of an ML model over time caused by changes in user expectations, behavior and the operational environment.",
+ vi:"Mối quan hệ đầu vào-đầu ra thay đổi — khác data drift (phân phối đầu vào thay đổi)."},
+{term:"confusion matrix",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"A technique for summarizing the ML functional performance of a classification algorithm.",
+ vi:"Ma trận tóm tắt hiệu suất phân loại: TP, TN, FP, FN — nền tảng tính accuracy/precision/recall/F1."},
+{term:"cross-prompt injection attack",ch:"Ch.4",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"An attack in which malicious instructions in one prompt or context segment disrupt an AI model's behavior in a different prompt, turn, or context segment.",
+ vi:"Hướng dẫn độc hại trong một đoạn prompt phá vỡ hành vi AI ở đoạn khác. Đặc thù LLM đa lượt."},
+{term:"data bias",ch:"Ch.5",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"A systematic error caused by inaccurate, incomplete, or unrepresentative training data that leads to unfair outcomes in ML models.",
+ vi:"Lỗi hệ thống do dữ liệu không chính xác/đầy đủ/đại diện. Phân biệt với algorithmic bias."},
+{term:"data drift",ch:"Ch.6",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"A change in the distribution of input data over time, which can negatively impact the functional performance of an operational ML model.",
+ vi:"Phân phối đầu vào thay đổi theo thời gian. Phát hiện: Kolmogorov-Smirnov test."},
+{term:"data pipeline",ch:"Ch.5",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The implementation of data preparation activities to provide input data to support training by an ML algorithm or prediction by an ML model.",
+ vi:"Pipeline chuẩn bị dữ liệu. 5 dạng kiểm thử: ingestion, transformation, quality, integration, performance."},
+{term:"data preparation",ch:"Ch.3",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The activities of data acquisition, data preprocessing and feature engineering in the ML workflow.",
+ vi:"Thu thập + tiền xử lý + kỹ thuật đặc trưng. Giai đoạn 2 của ML workflow. 'Rác vào, rác ra.'"},
+{term:"deep learning",ch:"Ch.1",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"ML using deep neural networks to automatically learn complex features and representations from large datasets.",
+ vi:"ML dùng DNN tự động học đặc trưng phức tạp từ dữ liệu lớn. Nền tảng: CNN, RNN, Transformer."},
+{term:"deep neural network",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A neural network comprised of several layers of neurons. Synonym: multi-layer perceptron",
+ vi:"Mạng nơ-ron nhiều lớp. 'Sâu' = nhiều lớp ẩn. Đồng nghĩa: multi-layer perceptron."},
+{term:"deepfake",ch:"Ch.1",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"Synthetic media created or edited using AI to convincingly mimic or impersonate real people or events.",
+ vi:"Media tổng hợp giả mạo người thật bằng AI. Rủi ro xã hội lớn của GenAI."},
+{term:"deterministic",ch:"Ch.4",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"Producing the same set of outputs and final state from a given set of inputs and starting state.",
+ vi:"Cùng đầu vào → cùng đầu ra. Đặc điểm của locked AI-based system. Dễ kiểm thử hơn."},
+{term:"disparate impact analysis",ch:"Ch.5",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"A technique for detecting bias by comparing decisions on original scenarios with their counterfactual versions, where sensitive attributes are swapped.",
+ vi:"Hoán đổi sensitive attributes → so sánh quyết định. Quy tắc 80%: dưới 80% → thiên kiến."},
+{term:"epoch",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"An iteration of ML training on the whole training dataset.",
+ vi:"Một lần duyệt qua toàn bộ tập huấn luyện. Early stopping: dừng khi validation loss bắt đầu tăng."},
+{term:"exploratory data analysis",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An interactive, visual, and hypothesis-driven process to summarize, explore, and understand the main characteristics and patterns of data.",
+ vi:"Quy trình trực quan, dựa giả thuyết để hiểu dữ liệu. Bước đầu tiên trong data preparation."},
+{term:"F1-Score",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An ML functional performance metric used to evaluate a classifier which provides a balance between recall and precision.",
+ vi:"Trung bình điều hòa của Precision và Recall. 2×(P×R)/(P+R). Dùng cho tập dữ liệu mất cân bằng."},
+{term:"false negative",ch:"Ch.3",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"An ML model prediction in which the model mistakenly predicts the negative class.",
+ vi:"Bỏ sót — dự đoán 'không' nhưng thực tế là 'có'. Lỗi Loại II. FN ở mẫu số của Recall."},
+{term:"false positive",ch:"Ch.3",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"An ML model prediction in which the model mistakenly predicts the positive class.",
+ vi:"Báo động giả — dự đoán 'có' nhưng thực tế là 'không'. Lỗi Loại I. FP ở mẫu số của Precision."},
+{term:"feature engineering",ch:"Ch.3",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The activity identifying attributes in raw data that best represent the underlying relationships to appear in the ML model. (ISO/IEC TR 29119-11)",
+ vi:"Xác định/tạo đặc trưng từ dữ liệu thô để đại diện tốt nhất mối quan hệ cần học."},
+{term:"follow-up test case",ch:"Ch.6",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"A test case derived from a source test case using a metamorphic relation, with different inputs but a determinable relationship to the source results.",
+ vi:"Test case dẫn xuất từ source test case qua metamorphic relation. Khác đầu vào, quan hệ đầu ra xác định được."},
+{term:"foundation model",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A large-scale ML model trained on large datasets using self-supervised learning, designed as a versatile base for fine-tuning across domains.",
+ vi:"Mô hình lớn huấn luyện self-supervised, nền tảng linh hoạt cho fine-tuning. Ví dụ: GPT, BERT."},
+{term:"frontier AI",ch:"Ch.1",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A general-purpose AI-based system that exceeds the capabilities of today's most advanced AI systems.",
+ vi:"Vượt trội nhất hiện nay. Vẫn là Narrow AI — chưa đạt General AI."},
+{term:"general AI",ch:"Ch.1",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A type of AI that can match human cognitive abilities across most intellectual tasks.",
+ vi:"AI sánh ngang nhận thức con người. Chưa tồn tại — tất cả AI hiện tại là Narrow AI."},
+{term:"generative AI",ch:"Ch.1",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"A type of AI that creates new content by learning patterns from existing data.",
+ vi:"AI tạo nội dung mới từ học mẫu. Công nghệ: GAN, diffusion, transformer. Thách thức: input explosion."},
+{term:"ground truth",ch:"Ch.6",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The information provided by direct observation and measurement that is known to be real or true.",
+ vi:"Thông tin đúng từ quan sát trực tiếp. Trong ML: nhãn chính xác. Trong drift testing: phản hồi người dùng."},
+{term:"hyperparameter",ch:"Ch.3",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"A parameter used to either control the training of an ML model or to set the configuration of an ML model.",
+ vi:"Tham số kiểm soát huấn luyện/cấu hình mô hình. Ví dụ: learning rate, batch size. Khác với trọng số (được học)."},
+{term:"inter-annotator agreement",ch:"Ch.5",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The degree of consensus or similarity among the annotations made by different annotators on the same data. (ISO/IEC TS 12791)",
+ vi:"Mức độ đồng thuận giữa các người chú thích. Đo bằng Cohen's kappa. Kappa thấp → nhãn không đáng tin."},
+{term:"large language model",ch:"Ch.4",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A text-to-text generative AI system trained on very large collections of language data.",
+ vi:"GenAI văn bản→văn bản, dữ liệu ngôn ngữ rất lớn. Kiểm thử: red teaming, adversarial prompts."},
+{term:"locked AI-based system",ch:"Ch.4",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"A deterministic AI-based system with a fixed unchanging model which does not change its behavior once it is deployed.",
+ vi:"Mô hình cố định sau triển khai. Dễ kiểm thử. Khi cập nhật = hệ thống MỚI cần kiểm thử lại."},
+{term:"metamorphic relation",ch:"Ch.6",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"An expected relation between inputs and outputs of multiple test cases that defines how the output should change when the input is transformed.",
+ vi:"Mối quan hệ mong đợi giữa đầu vào-đầu ra, xác định cách đầu ra thay đổi khi biến đổi đầu vào."},
+{term:"ML algorithm",ch:"Ch.3",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"An algorithm used to create an ML model from a training dataset.",
+ vi:"Thuật toán tạo mô hình ML từ dữ liệu. Ví von: thuật toán = công thức; mô hình ML = món ăn đã nấu."},
+{term:"ML regression",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"A type of ML function that results in a numerical or continuous output value for a given input. (ISO/IEC TR 29119-11)",
+ vi:"Đầu ra số/liên tục. ⚠️ HOÀN TOÀN KHÁC 'regression testing' trong kiểm thử phần mềm."},
+{term:"ML workflow",ch:"Ch.3",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"The set of activities used to develop, deploy and operate an ML model.",
+ vi:"6 giai đoạn: Mục tiêu → Dữ liệu → Tạo mô hình → Kiểm thử → Triển khai → Sử dụng. Lặp đi lặp lại."},
+{term:"model confidence score analysis",ch:"Ch.5",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"A technique that identifies data points with low confidence scores from training, which are indicators for mislabeled data points.",
+ vi:"Điểm tin cậy thấp trong training = chỉ số điểm dữ liệu bị gán nhãn sai."},
+{term:"multiple annotation",ch:"Ch.5",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An approach in which labelled data points from multiple annotators are compared.",
+ vi:"Nhiều người chú thích cùng gán nhãn → so sánh → đồng thuận/đa số. Thuật ngữ AI đặc thù trong CT-AI."},
+{term:"narrow AI",ch:"Ch.1",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"AI focused on a single well-defined task to address a specific problem. Synonym: weak AI. (ISO/IEC TR 29119-11)",
+ vi:"AI chuyên một tác vụ. Đồng nghĩa: weak AI. TẤT CẢ AI hiện tại là Narrow AI (kể cả Frontier AI)."},
+{term:"neural network",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A network of primitive processing elements connected by weighted links, each producing a value by applying a nonlinear function. (ISO/IEC 2382)",
+ vi:"Mạng các phần tử xử lý kết nối bằng liên kết có trọng số, áp dụng hàm phi tuyến. Đồng nghĩa: ANN."},
+{term:"non-determinism",ch:"Ch.4",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"A property of a system or process in which an outcome is not uniquely determined by its initial conditions.",
+ vi:"Kết quả không được xác định duy nhất bởi điều kiện ban đầu. Thách thức an toàn AI số 2."},
+{term:"overfitting",ch:"Ch.6",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"The generation of an ML model that corresponds too closely to the training dataset, resulting in a model that finds it difficult to generalize. (ISO/IEC TR 29119-11)",
+ vi:"Training cao + Test thấp = khoảng cách lớn. Giảm thiểu: regularization (L1/L2), dropout, early stopping."},
+{term:"precision",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An ML functional performance metric measuring the proportion of predicted positives that were correct. (ISO/IEC TR 29119-11)",
+ vi:"TP/(TP+FP). FP ở mẫu số. Dùng khi FP tốn kém (cảnh báo nhầm gây hại — KnowYourPet, spam)."},
+{term:"pretrained model",ch:"Ch.3",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"An ML model already trained on a large, general-purpose dataset that can be reused or fine-tuned for specific tasks.",
+ vi:"Mô hình đã huấn luyện sẵn, tái sử dụng/fine-tune. Rủi ro: inherited limitations (thiên kiến kế thừa)."},
+{term:"probabilistic",ch:"Ch.4",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"Behavior described in terms of probabilities, where outcomes are uncertain and described by likelihoods rather than certainty.",
+ vi:"Hành vi theo xác suất. Lý do AI cần statistical testing thay vì deterministic testing."},
+{term:"recall",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An ML functional performance metric measuring the proportion of actual positives that were predicted correctly. Synonym: sensitivity. (ISO/IEC TR 29119-11)",
+ vi:"TP/(TP+FN). FN ở mẫu số. Dùng khi FN tốn kém (bỏ sót nguy hiểm: ung thư, gian lận)."},
+{term:"reinforcement learning",ch:"Ch.1",color:"#EAF3DE",border:"#639922",text:"#27500A",
+ en:"An approach in which an ML model, known as an agent, learns by using a trial-and-reward feedback loop to achieve specific objectives.",
+ vi:"Tác nhân học qua thử-thưởng. Không cần nhãn. Ứng dụng: robot, xe tự lái, game AI."},
+{term:"retrieval-augmented generation",ch:"Ch.3",color:"#E1F5EE",border:"#1D9E75",text:"#0F6E56",
+ en:"An ML technique where a GenAI system dynamically improves its output by retrieving relevant external information to supplement its internal knowledge.",
+ vi:"GenAI truy xuất thông tin ngoài tại query time — không thay đổi trọng số (khác fine-tuning)."},
+{term:"reward hacking",ch:"Ch.1",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"The activity performed by an intelligent agent to maximize its reward function to the detriment of meeting the original objective. (ISO/IEC TR 29119-11)",
+ vi:"Tác nhân khai thác hàm phần thưởng để tích điểm thay vì đạt mục tiêu thực sự."},
+{term:"self-learning system",ch:"Ch.2",color:"#E6F1FB",border:"#378ADD",text:"#0C447C",
+ en:"An adaptive system that changes its behavior based on learning through trial and error.",
+ vi:"Hệ thống thích nghi học qua thử-sai. Thách thức an toàn AI số 3: hành vi rời xa trạng thái đã kiểm thử."},
+{term:"sensitive attributes",ch:"Ch.5",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"Characteristics that define legally or ethically protected groups and individuals that must be controlled to prevent discrimination.",
+ vi:"Đặc điểm nhóm được bảo vệ pháp lý/đạo đức. Ví dụ: chủng tộc, giới tính, tuổi. Dùng trong bias testing."},
+{term:"super AI",ch:"Ch.1",color:"#F1EFE8",border:"#888780",text:"#444441",
+ en:"A type of AI that far exceeds human capabilities.",
+ vi:"AI vượt xa khả năng con người. Chưa tồn tại. Liên quan: technological singularity."},
+{term:"test oracle problem",ch:"Ch.4",color:"#FAECE7",border:"#D85A30",text:"#993C1D",
+ en:"The challenge of determining whether a test has passed or failed for a given set of test inputs and state.",
+ vi:"Thách thức xác định kết quả kiểm thử. 4 nguyên nhân + 6 giải pháp."},
+{term:"transformer",ch:"Ch.1",color:"#EEEDFE",border:"#7F77DD",text:"#3C3489",
+ en:"A neural network architecture that processes sequential data to capture long-range dependencies, powering NLP tasks, computer vision and multimodal applications.",
+ vi:"Kiến trúc NN xử lý tuần tự, nắm bắt phụ thuộc tầm xa. Nền tảng LLM. Cơ chế: self-attention."},
+{term:"underfitting",ch:"Ch.6",color:"#FAEEDA",border:"#BA7517",text:"#633806",
+ en:"The generation of an ML model that does not reflect the underlying trend of the training dataset, resulting in inaccurate predictions. (ISO/IEC TR 29119-11)",
+ vi:"Cả training lẫn test đều thấp — mô hình quá đơn giản. Giảm: mô hình phức tạp hơn, ít regularization."},
+];
+
+let fcCurrent=[], fcFlippedSet=new Set();
+
+function fcPick10(){
+  return [...FC_TERMS].sort(()=>Math.random()-.5).slice(0,10);
+}
+function fcUpdateStats(){
+  const f=fcFlippedSet.size;
+  const fd=document.getElementById('fc-flipped');
+  const rd=document.getElementById('fc-remain');
+  if(fd) fd.textContent=f;
+  if(rd) rd.textContent=10-f;
+}
+function fcRender(){
+  fcCurrent=fcPick10();
+  fcFlippedSet.clear();
+  const grid=document.getElementById('fc-grid');
+  if(!grid) return;
+  grid.innerHTML='';
+  fcCurrent.forEach((t,i)=>{
+    const card=document.createElement('div');
+    card.className='fc-card';
+    card.id='fcc-'+i;
+    card.innerHTML=`<div class="fc-inner">
+      <div class="fc-front" style="border-color:${t.border}40;background:${t.color}08;">
+        <div>
+          <span class="fc-chapter-chip" style="background:${t.color};border:1px solid ${t.border}30;color:${t.text};">${t.ch}</span>
+          <div class="fc-term">${t.term}</div>
+        </div>
+        <div class="fc-hint">👆 nhấn để xem định nghĩa</div>
+      </div>
+      <div class="fc-back" style="border-color:${t.border}40;">
+        <div class="fc-def-label">EN — Wording chính xác từ syllabus</div>
+        <div class="fc-def-en">${t.en}</div>
+        <div class="fc-def-vi">${t.vi}</div>
+      </div>
+    </div>`;
+    card.addEventListener('click',()=>{
+      card.classList.toggle('flipped');
+      if(card.classList.contains('flipped')) fcFlippedSet.add(i);
+      else fcFlippedSet.delete(i);
+      fcUpdateStats();
+    });
+    grid.appendChild(card);
+  });
+  fcUpdateStats();
+}
+window.fcReshuffle=function(){ fcRender(); };
+window.fcFlipAll=function(state){
+  fcCurrent.forEach((_,i)=>{
+    const c=document.getElementById('fcc-'+i);
+    if(!c) return;
+    if(state){c.classList.add('flipped');fcFlippedSet.add(i);}
+    else{c.classList.remove('flipped');fcFlippedSet.delete(i);}
+  });
+  fcUpdateStats();
+};
+fcRender();
+})();
+</script>
+
+<div class="section-title">🔤 A</div>
+<div class="term-block">
+<div class="en-term">accuracy</div>
+<div class="en-def">The ML functional performance metric used to evaluate a classifier, which measures the proportion of predictions that were correct. <em>(After ISO/IEC TR 29119-11)</em><br><br>Formula: <strong>(TP + TN) / Total</strong></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Chỉ số hiệu suất chức năng ML dùng để đánh giá bộ phân loại, đo lường tỷ lệ dự đoán đúng trên tổng số dự đoán. Công thức: (TP + TN) / Tổng số mẫu.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">activation function</div>
+<div class="en-def">The formula associated with a neuron in a neural network that determines the output of the neuron from the inputs to the neuron.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Công thức gắn liền với một nơ-ron trong mạng nơ-ron, xác định đầu ra của nơ-ron từ các đầu vào của nó. Phải phi tuyến để DNN học được các mẫu phức tạp.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">activation value</div>
+<div class="en-def">The output of an activation function of a neuron in a neural network.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Đầu ra của hàm kích hoạt của một nơ-ron trong mạng nơ-ron — giá trị này được truyền đến các nơ-ron ở lớp tiếp theo.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">adaptive AI-based system</div>
+<div class="en-def">An AI-based system that adjusts its behavior in response to changes in its operational environment.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống dựa trên AI điều chỉnh hành vi của nó để đáp ứng với những thay đổi trong môi trường vận hành. Ví dụ: hệ thống đề xuất thương mại điện tử học từ hành vi người dùng sau triển khai.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">adversarial attack</div>
+<div class="en-def">The deliberate use of adversarial examples to cause an ML model to fail.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Việc sử dụng có chủ đích các ví dụ đối nghịch để khiến mô hình ML thất bại. Ví dụ: thêm nhiễu không nhìn thấy được vào hình ảnh khiến mô hình phân loại sai.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">AI as a Service (AIaaS)</div>
+<div class="en-def">A software licensing and delivery model in which AI and AI development services are centrally hosted.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình cấp phép và phân phối phần mềm trong đó AI và các dịch vụ phát triển AI được lưu trữ tập trung (trên đám mây). Ba rủi ro kiểm thử chính: khóa nhà cung cấp, quyền riêng tư dữ liệu, tính minh bạch mô hình.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">AI component</div>
+<div class="en-def">A component that provides AI functionality.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một thành phần cung cấp chức năng AI — ví dụ: mô hình ML được nhúng vào một hệ thống lớn hơn.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">AI model</div>
+<div class="en-def">A computer program that implements AI.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một chương trình máy tính triển khai AI — đây là sản phẩm được tạo ra bởi thuật toán ML sau khi huấn luyện trên dữ liệu.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">AI-based system</div>
+<div class="en-def">A system that incorporates one or more AI components.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống tích hợp một hoặc nhiều thành phần AI. Bao gồm cả các thành phần không phải AI (UI, pipeline dữ liệu) đòi hỏi các cấp độ kiểm thử thông thường.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">algorithmic bias</div>
+<div class="en-def">A type of bias caused by the ML algorithm.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại thiên kiến do chính thuật toán ML gây ra (phân biệt với data bias do dữ liệu). Ví dụ: thuật toán chọn đặc trưng vô tình ưu tiên một nhóm dân số nhất định.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">annotation</div>
+<div class="en-def">The activity of identifying objects in images with bounding boxes to provide labelled data for classification.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động xác định các đối tượng trong hình ảnh bằng hộp giới hạn (bounding box) để cung cấp dữ liệu có nhãn cho phân loại. Là bước cốt lõi trong tạo tập dữ liệu học có giám sát.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">artificial intelligence (AI)</div>
+<div class="en-def">The capability of an engineered system to acquire, process, create and apply knowledge and skills. <em>(ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Khả năng của một hệ thống kỹ thuật để thu nhận, xử lý, tạo ra và áp dụng kiến thức và kỹ năng. Đây là định nghĩa chính thức theo ISO/IEC TR 29119-11.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">association</div>
+<div class="en-def">An unsupervised ML learning technique that identifies relationships and dependencies between samples.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật học ML không giám sát xác định các mối quan hệ và sự phụ thuộc giữa các mẫu. Ví dụ: "khách hàng mua tã cũng thường mua bia" trong phân tích giỏ hàng.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">augmentation</div>
+<div class="en-def">The activity of creating new data points based on an existing dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động tạo ra các điểm dữ liệu mới dựa trên tập dữ liệu hiện có. Ví dụ: lật, xoay, thay đổi độ sáng ảnh để tăng kích thước tập huấn luyện mà không thu thập dữ liệu mới.</div>
+</div>
+
+<div class="section-title">🔤 B</div>
+<div class="term-block">
+<div class="en-term">Bayesian model</div>
+<div class="en-def">A statistical model that uses probability to represent the uncertainty of both model inputs and outputs.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình thống kê sử dụng xác suất để biểu diễn sự không chắc chắn của cả đầu vào lẫn đầu ra của mô hình. Cung cấp ước tính tin cậy cho mỗi dự đoán.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">bias</div>
+<div class="en-def">The systematic difference in treatment of certain objects, people or groups in comparison to others. <em>(After ISO/IEC TR 24027)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Sự khác biệt có hệ thống trong cách đối xử với một số đối tượng, con người hoặc nhóm so với những người khác. ⚠️ Lưu ý: "bias" của nơ-ron trong DNN là khái niệm kỹ thuật hoàn toàn khác.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">big data</div>
+<div class="en-def">Extensive datasets whose characteristics in terms of volume, variety, velocity and/or variability require specialized technologies and techniques to process.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Các tập dữ liệu khổng lồ có đặc tính về khối lượng, đa dạng, tốc độ và/hoặc biến đổi đòi hỏi các công nghệ và kỹ thuật chuyên biệt để xử lý. (4V: Volume, Variety, Velocity, Variability)</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">bootstrap technique</div>
+<div class="en-def">A resampling technique that repeatedly draws samples with replacement from a training dataset to estimate the ML functional performance criteria of an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật lấy mẫu lại liên tục rút mẫu có hoàn lại từ tập dữ liệu huấn luyện để ước tính tiêu chí hiệu suất chức năng ML của mô hình. Thay thế cho k-fold khi dữ liệu rất ít.</div>
+</div>
+
+<div class="section-title">🔤 C</div>
+<div class="term-block">
+<div class="en-term">chatbot</div>
+<div class="en-def">An application used to conduct a conversation via text or text-to-speech.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Ứng dụng được dùng để thực hiện cuộc trò chuyện qua văn bản hoặc chuyển văn bản thành giọng nói. Ví dụ kiểm thử: kiểm thử red teaming trước triển khai.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">classification</div>
+<div class="en-def">An ML function that predicts the output class for a given input. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hàm ML dự đoán lớp đầu ra cho một đầu vào nhất định. Ví dụ: spam/không spam, ung thư/không ung thư, chó/mèo. Đầu ra rời rạc (khác với ML regression có đầu ra liên tục).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">classifier</div>
+<div class="en-def">An ML model used for classification. <em>Synonym: classification model</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình ML được dùng cho phân loại. Đồng nghĩa: mô hình phân loại. Hiệu suất được đánh giá bằng accuracy, precision, recall, F1-score.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">clustering</div>
+<div class="en-def">An ML function that groups similar data points together.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hàm ML nhóm các điểm dữ liệu tương tự lại với nhau — kỹ thuật học không giám sát, không cần nhãn. Ví dụ: nhóm bài báo theo chủ đề, phân khúc khách hàng.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">clustering algorithm</div>
+<div class="en-def">A type of ML algorithm used to group similar objects into clusters.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại thuật toán ML được dùng để nhóm các đối tượng tương tự vào các cụm. Ví dụ: K-means, DBSCAN, hierarchical clustering.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">concept drift</div>
+<div class="en-def">A change in the perceived functional performance of an ML model over time caused by changes in user expectations, behavior and the operational environment.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Sự thay đổi trong hiệu suất chức năng nhận thức của mô hình ML theo thời gian do thay đổi kỳ vọng người dùng, hành vi và môi trường vận hành. Khác data drift: mối quan hệ đầu vào-đầu ra thay đổi, không phải chỉ phân phối đầu vào.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">confusion matrix</div>
+<div class="en-def">A technique for summarizing the ML functional performance of a classification algorithm.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật tóm tắt hiệu suất chức năng ML của thuật toán phân loại. Hiển thị TP, TN, FP, FN — nền tảng để tính accuracy, precision, recall, F1-score.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">convolutional neural network (CNN)</div>
+<div class="en-def">A type of deep learning model designed to process grid-like data such as images, enabling it to recognize spatial patterns and features through layered operations.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại mô hình deep learning được thiết kế để xử lý dữ liệu dạng lưới như hình ảnh, nhận dạng các mẫu không gian và đặc trưng qua các phép toán lớp. Ứng dụng: nhận dạng hình ảnh, thị giác máy tính.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">cross-prompt injection attack</div>
+<div class="en-def">An attack in which malicious instructions in one prompt or context segment disrupt an AI model's behavior in a different prompt, turn, or context segment.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tấn công trong đó hướng dẫn độc hại trong một đoạn prompt hoặc ngữ cảnh phá vỡ hành vi của mô hình AI trong một prompt, lượt hoặc đoạn ngữ cảnh khác. Là loại tấn công đặc thù với LLM đa lượt.</div>
+</div>
+
+<div class="section-title">🔤 D</div>
+<div class="term-block">
+<div class="en-term">data acquisition</div>
+<div class="en-def">The activity of acquiring data relevant to the business problem to be solved by an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động thu thập dữ liệu liên quan đến vấn đề kinh doanh cần giải quyết bởi mô hình ML. Bước đầu tiên trong data preparation của ML workflow.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data bias</div>
+<div class="en-def">A systematic error caused by inaccurate, incomplete, or unrepresentative training data that leads to unfair outcomes in ML models.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Lỗi có hệ thống do dữ liệu huấn luyện không chính xác, không đầy đủ hoặc không đại diện dẫn đến kết quả không công bằng trong các mô hình ML. Phân biệt với algorithmic bias (do thuật toán).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data drift</div>
+<div class="en-def">A change in the distribution of input data over time, which can negatively impact the functional performance of an operational ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Sự thay đổi trong phân phối dữ liệu đầu vào theo thời gian, có thể ảnh hưởng tiêu cực đến hiệu suất chức năng của mô hình ML vận hành. Phát hiện qua kiểm thử thống kê (Kolmogorov-Smirnov).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data pipeline</div>
+<div class="en-def">The implementation of data preparation activities to provide input data to support training by an ML algorithm or prediction by an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Việc triển khai các hoạt động chuẩn bị dữ liệu để cung cấp dữ liệu đầu vào hỗ trợ huấn luyện bởi thuật toán ML hoặc dự đoán bởi mô hình ML. Kiểm thử pipeline: 5 dạng (ingestion, transformation, quality, integration, performance).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data point</div>
+<div class="en-def">A set of one or more measurements comprising a single observation used as part of a dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tập hợp một hoặc nhiều phép đo tạo thành một quan sát đơn lẻ được sử dụng như một phần của tập dữ liệu. Ví dụ: một hàng dữ liệu bệnh nhân (tuổi, cân nặng, huyết áp).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data preparation</div>
+<div class="en-def">The activities of data acquisition, data preprocessing and feature engineering in the ML workflow.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Các hoạt động thu thập dữ liệu, tiền xử lý dữ liệu và kỹ thuật đặc trưng trong quy trình ML. Giai đoạn 2 của ML workflow — "rác vào, rác ra."</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">data preprocessing</div>
+<div class="en-def">The activities of data cleaning, data transformation, data augmentation, and data sampling in the ML workflow.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Các hoạt động làm sạch dữ liệu, biến đổi dữ liệu, tăng cường dữ liệu và lấy mẫu dữ liệu trong quy trình ML — phần con của data preparation.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">dataset</div>
+<div class="en-def">A collection of data used for training, evaluation, testing and prediction in ML.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tập hợp dữ liệu được dùng cho huấn luyện, đánh giá, kiểm thử và dự đoán trong ML. Ba loại: training (~70%), validation (~15%), test (~15%).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">decision tree</div>
+<div class="en-def">A tree-like ML model whose nodes represent decisions, and whose branches represent possible outcomes.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình ML dạng cây có các nút đại diện cho quyết định và các nhánh đại diện cho kết quả có thể. Ưu điểm: dễ giải thích (interpretable). Nhược điểm: dễ overfitting.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">deep learning (DL)</div>
+<div class="en-def">ML using deep neural networks to automatically learn complex features and representations from large datasets.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>ML sử dụng mạng nơ-ron sâu để tự động học các đặc trưng và biểu diễn phức tạp từ các tập dữ liệu lớn. Nền tảng của CNN, RNN, Transformer, LLM, GAN.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">deep neural network (DNN)</div>
+<div class="en-def">A neural network comprised of several layers of neurons. <em>Synonym: multi-layer perceptron</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mạng nơ-ron bao gồm nhiều lớp nơ-ron. Đồng nghĩa: perceptron đa lớp. Cấu trúc: lớp đầu vào + nhiều lớp ẩn + lớp đầu ra. "Sâu" = nhiều lớp ẩn.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">deepfake</div>
+<div class="en-def">Synthetic media, such as video, audio, or images, created or edited using AI to convincingly mimic or impersonate real people or events.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Phương tiện tổng hợp như video, âm thanh hoặc hình ảnh được tạo hoặc chỉnh sửa bằng AI để giả mạo thuyết phục người thật hoặc sự kiện thật. Rủi ro xã hội quan trọng của GenAI.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">deterministic</div>
+<div class="en-def">Producing the same set of outputs and final state from a given set of inputs and starting state.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tạo ra cùng một tập hợp đầu ra và trạng thái cuối từ một tập đầu vào và trạng thái bắt đầu nhất định. Đặc điểm của hệ thống bị khóa (locked) — dễ kiểm thử hơn hệ thống thích nghi.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">disparate impact analysis</div>
+<div class="en-def">A technique for detecting bias by comparing decisions on original scenarios with their counterfactual versions, where sensitive attributes are swapped.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật phát hiện thiên kiến bằng cách so sánh quyết định trên các kịch bản gốc với các phiên bản phản thực của chúng, trong đó các thuộc tính nhạy cảm được hoán đổi. Quy tắc 80%: tỷ lệ nhóm bảo vệ &lt; 80% nhóm được ưu tiên → có thiên kiến.</div>
+</div>
+
+<div class="section-title">🔤 E</div>
+<div class="term-block">
+<div class="en-term">edge AI</div>
+<div class="en-def">The deployment of AI models on local edge devices, enabling real-time processing near the source of data without relying on cloud-based systems.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Triển khai mô hình AI trên các thiết bị biên cục bộ, cho phép xử lý thời gian thực gần nguồn dữ liệu mà không phụ thuộc vào hệ thống dựa trên đám mây. Liên quan: ASIC, SoC, cross-device testing.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">epoch</div>
+<div class="en-def">An iteration of ML training on the whole training dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một lần lặp của quá trình huấn luyện ML trên toàn bộ tập dữ liệu huấn luyện. Sau nhiều epoch, mô hình hội tụ. Early stopping dừng khi validation loss bắt đầu tăng.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">expert system</div>
+<div class="en-def">An AI-based system for solving problems in a particular domain or application area by drawing inferences from a knowledge base developed from human expertise.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống dựa trên AI giải quyết vấn đề trong một lĩnh vực cụ thể bằng cách rút ra suy luận từ cơ sở kiến thức được phát triển từ chuyên môn con người. Ví dụ: hệ thống chẩn đoán y tế dựa trên quy tắc.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">explainable AI</div>
+<div class="en-def">The field of study related to understanding the factors that influence AI system outputs.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Lĩnh vực nghiên cứu liên quan đến việc hiểu các yếu tố ảnh hưởng đến đầu ra của hệ thống AI. Kỹ thuật tiêu biểu: LIME. Liên quan: thách thức an toàn AI "explainability &amp; transparency".</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">exploratory data analysis (EDA)</div>
+<div class="en-def">An interactive, visual, and hypothesis-driven process to summarize, explore, and understand the main characteristics and patterns of data.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Quy trình tương tác, trực quan và dựa trên giả thuyết để tóm tắt, khám phá và hiểu các đặc điểm và mẫu chính của dữ liệu. Bước đầu tiên trong data preparation — trước khi làm sạch hay biến đổi.</div>
+</div>
+
+<div class="section-title">🔤 F</div>
+<div class="term-block">
+<div class="en-term">F1-Score</div>
+<div class="en-def">An ML functional performance metric used to evaluate a classifier which provides a balance between recall and precision.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Chỉ số hiệu suất chức năng ML đánh giá bộ phân loại, cung cấp sự cân bằng giữa recall và precision. Công thức: 2×(P×R)/(P+R). Dùng khi cả FP lẫn FN đều quan trọng hoặc tập dữ liệu mất cân bằng.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">false negative (FN)</div>
+<div class="en-def">An ML model prediction in which the model mistakenly predicts the negative class.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Dự đoán của mô hình ML trong đó mô hình nhầm lẫn dự đoán lớp âm tính (bỏ sót thực thể dương tính). Lỗi Loại II. Xuất hiện trong mẫu số của Recall. Tốn kém trong: phát hiện ung thư, gian lận.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">false positive (FP)</div>
+<div class="en-def">An ML model prediction in which the model mistakenly predicts the positive class.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Dự đoán của mô hình ML trong đó mô hình nhầm lẫn dự đoán lớp dương tính (báo động giả). Lỗi Loại I. Xuất hiện trong mẫu số của Precision. Tốn kém trong: bộ lọc spam, KnowYourPet.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">feature</div>
+<div class="en-def">An individual measurable attribute of the input data used for training by an ML algorithm and for prediction by an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thuộc tính có thể đo lường riêng lẻ của dữ liệu đầu vào được sử dụng để huấn luyện bởi thuật toán ML và để dự đoán bởi mô hình ML. Ví dụ: tuổi, thu nhập, số phòng ngủ trong mô hình giá nhà.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">feature engineering</div>
+<div class="en-def">The activity in which those attributes in the raw data that best represent the underlying relationships that should appear in the ML model are identified for use in the training data. <em>(ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động trong đó các thuộc tính trong dữ liệu thô đại diện tốt nhất cho các mối quan hệ cơ bản được xác định để sử dụng trong dữ liệu huấn luyện. Bao gồm: tạo đặc trưng mới, chọn lọc đặc trưng liên quan.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">feature testing</div>
+<div class="en-def">A test type to determine if an AI model training dataset contains an appropriate set of features.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại kiểm thử để xác định xem tập dữ liệu huấn luyện mô hình AI có chứa tập đặc trưng phù hợp không. Ánh xạ rủi ro: "lựa chọn đặc trưng không tối ưu → feature testing" (bảng rủi ro §5.1.1).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">follow-up test case</div>
+<div class="en-def">A test case derived from a source test case using a metamorphic relation. The follow-up test case has different inputs from the source test case, but the relationship between the test results of both test cases can be determined by the metamorphic relation.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Test case được dẫn xuất từ test case nguồn sử dụng quan hệ metamorphic. Test case theo dõi có đầu vào khác với test case nguồn, nhưng mối quan hệ giữa kết quả của cả hai có thể được xác định bởi quan hệ metamorphic.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">foundation model</div>
+<div class="en-def">A large-scale ML model trained on large datasets using self-supervised learning, designed as a versatile base that can be fine-tuned or adapted to a wide range of tasks across different domains.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình ML quy mô lớn được huấn luyện trên tập dữ liệu lớn bằng học tự giám sát, được thiết kế như một nền tảng linh hoạt có thể tinh chỉnh hoặc thích nghi cho nhiều tác vụ. Ví dụ: GPT-4, BERT, LLaMA.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">frontier AI</div>
+<div class="en-def">A general-purpose AI-based system that exceeds the capabilities of today's most advanced AI systems.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống dựa trên AI đa năng vượt qua khả năng của các hệ thống AI tiên tiến nhất hiện nay. Vẫn là Narrow AI (không phải General AI). Ví dụ: các mô hình multimodal lớn nhất hiện tại.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">fuzzy logic</div>
+<div class="en-def">A type of logic based on the concept of partial truth represented by certainty factors between 0 and 1.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại logic dựa trên khái niệm sự thật một phần được biểu diễn bằng các hệ số chắc chắn giữa 0 và 1. Cho phép lý luận với thông tin không chắc chắn hoặc mơ hồ.</div>
+</div>
+
+<div class="section-title">🔤 G</div>
+<div class="term-block">
+<div class="en-term">general AI</div>
+<div class="en-def">A type of AI that can match human cognitive abilities across most intellectual tasks.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại AI có thể sánh ngang với khả năng nhận thức của con người trong hầu hết các tác vụ trí tuệ. Chưa tồn tại — tất cả AI hiện tại là Narrow AI. Khác Frontier AI (vẫn là Narrow AI).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">generative AI (GenAI)</div>
+<div class="en-def">A type of AI that creates new content by learning patterns from existing data.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại AI tạo ra nội dung mới bằng cách học các mẫu từ dữ liệu hiện có. Công nghệ chính: GAN, diffusion models, transformers. Thách thức kiểm thử: input explosion (system prompt + user prompt + parameters + context window).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">graphics processing unit (GPU)</div>
+<div class="en-def">An application-specific integrated circuit designed to manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mạch tích hợp đặc thù ứng dụng được thiết kế để xử lý bộ nhớ nhằm tăng tốc tạo hình ảnh. Vượt trội CPU trong ML do hàng nghìn nhân cho xử lý song song — dù CPU có tốc độ đồng hồ cao hơn.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ground truth</div>
+<div class="en-def">The information provided by direct observation and measurement that is known to be real or true.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thông tin được cung cấp bởi quan sát và đo lường trực tiếp được biết là thực hoặc đúng. Trong ML giám sát: nhãn chính xác của dữ liệu. Trong drift testing: phản hồi từ người dùng cung cấp ground truth hiện tại.</div>
+</div>
+
+<div class="section-title">🔤 H</div>
+<div class="term-block">
+<div class="en-term">hyperparameter</div>
+<div class="en-def">A parameter used to either control the training of an ML model or to set the configuration of an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tham số được dùng để kiểm soát quá trình huấn luyện hoặc cấu hình mô hình ML. Ví dụ: learning rate, số lớp ẩn, batch size. Khác với tham số mô hình (trọng số) được học tự động.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">hyperparameter tuning</div>
+<div class="en-def">The activity of determining the optimal hyperparameters based on particular goals.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động xác định các siêu tham số tối ưu dựa trên các mục tiêu cụ thể. Thực hiện trong Giai đoạn 3 (Model Generation) sử dụng tập xác thực — KHÔNG dùng tập kiểm thử.</div>
+</div>
+
+<div class="section-title">🔤 I</div>
+<div class="term-block">
+<div class="en-term">intelligent agent</div>
+<div class="en-def">An autonomous program which directs its activity towards achieving goals using observations and actions.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Chương trình tự trị hướng hoạt động của nó để đạt được mục tiêu bằng quan sát và hành động. Là "AI" trong reinforcement learning — học qua thử-sai với phần thưởng/phạt.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">inter-annotator agreement (IAA)</div>
+<div class="en-def">The degree of consensus or similarity among the annotations made by different annotators on the same data. <em>(ISO/IEC TS 12791)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mức độ đồng thuận hoặc tương đồng giữa các chú thích của các người chú thích khác nhau trên cùng dữ liệu. Đo bằng Cohen's kappa. Kappa thấp = nhãn mơ hồ hoặc không đáng tin cậy → cần xem xét lại tiêu chí chú thích.</div>
+</div>
+
+<div class="section-title">🔤 L</div>
+<div class="term-block">
+<div class="en-term">large language model (LLM)</div>
+<div class="en-def">A text-to-text generative AI system trained on very large collections of language data.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống AI tạo sinh văn bản-đến-văn bản được huấn luyện trên các bộ sưu tập dữ liệu ngôn ngữ rất lớn. Ví dụ: GPT-4, Claude, Llama. Kiểm thử: input explosion, red teaming, adversarial prompts.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">linear regression</div>
+<div class="en-def">A statistical technique that models the relationship between variables by fitting a linear equation to the observed data when the target variable is numeric.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật thống kê mô hình hóa mối quan hệ giữa các biến bằng cách khớp phương trình tuyến tính với dữ liệu quan sát khi biến mục tiêu là số. Một dạng của ML regression.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">locked AI-based system</div>
+<div class="en-def">A deterministic AI-based system with a fixed unchanging model which does not change its behavior once it is deployed.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống dựa trên AI tất định với mô hình cố định không thay đổi, không thay đổi hành vi sau khi triển khai. Dễ kiểm thử hơn. Khi được cập nhật = hệ thống MỚI. Ví dụ: DNN phát hiện làn đường xe tự lái.</div>
+</div>
+
+<div class="section-title">🔤 M</div>
+<div class="term-block">
+<div class="en-term">machine learning (ML)</div>
+<div class="en-def">(See syllabus §1.1.3 — the glossary refers to the chapter content for this term.)</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một nhánh của AI cho phép hệ thống học từ dữ liệu và cải thiện theo kinh nghiệm mà không được lập trình rõ ràng. Ba hình thức: học có giám sát, không giám sát, tăng cường.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">metamorphic relation (MR)</div>
+<div class="en-def">An expected relation between the inputs and the outputs of multiple test cases, based on the semantics of the system under test, that defines how the output should change when the input is transformed.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mối quan hệ mong đợi giữa đầu vào và đầu ra của nhiều test case, dựa trên ngữ nghĩa của hệ thống đang kiểm thử, xác định cách đầu ra nên thay đổi khi đầu vào được biến đổi. Nền tảng của metamorphic testing (K3).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ML algorithm</div>
+<div class="en-def">An algorithm used to create an ML model from a training dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thuật toán được dùng để tạo ra mô hình ML từ tập dữ liệu huấn luyện. Ví von: thuật toán = công thức nấu ăn; mô hình ML = món ăn đã nấu. Cùng thuật toán + dữ liệu khác = mô hình khác.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ML development framework</div>
+<div class="en-def">A software platform that provides tools and libraries to build, train, and deploy ML models.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Nền tảng phần mềm cung cấp công cụ và thư viện để xây dựng, huấn luyện và triển khai mô hình ML. 5 chức năng: data handling, model building, training &amp; optimization, evaluation, deployment.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ML model</div>
+<div class="en-def">An artifact produced by training an ML algorithm on a dataset that can be used to make predictions on new data. <em>(Synthesized from §3.1.1)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Sản phẩm được tạo ra bằng cách huấn luyện thuật toán ML trên tập dữ liệu, có thể được dùng để dự đoán trên dữ liệu mới. Chứa các tham số đã học (trọng số, bias). Là thứ được triển khai trong production.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ML regression</div>
+<div class="en-def">A type of ML function that results in a numerical or continuous output value for a given input. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại hàm ML tạo ra giá trị đầu ra số hoặc liên tục cho một đầu vào nhất định. ⚠️ HOÀN TOÀN KHÁC "regression testing" trong kiểm thử phần mềm thông thường. Ví dụ: dự đoán giá nhà, nhiệt độ, doanh thu.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">ML workflow</div>
+<div class="en-def">The set of activities used to develop, deploy and operate an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tập hợp các hoạt động được dùng để phát triển, triển khai và vận hành mô hình ML. 6 giai đoạn: (1) Xác định mục tiêu → (2) Chuẩn bị dữ liệu → (3) Tạo mô hình → (4) Kiểm thử → (5) Triển khai → (6) Sử dụng &amp; giám sát. Lặp đi lặp lại.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">model confidence score analysis</div>
+<div class="en-def">A technique that identifies data points with low confidence scores from training, which are indicators for mislabeled data points.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật xác định các điểm dữ liệu có điểm tin cậy thấp từ quá trình huấn luyện, đây là chỉ số của các điểm dữ liệu bị gán nhãn sai. Dùng trong label correctness testing (§5.1.6).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">model loss analysis</div>
+<div class="en-def">A technique that identifies data points with high loss values during training, which are indicators for mislabeled data points.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật xác định các điểm dữ liệu có giá trị mất mát cao trong quá trình huấn luyện, đây là chỉ số của các điểm dữ liệu bị gán nhãn sai. Điểm dữ liệu có loss cao = mô hình khó học → khả năng nhãn sai.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">multimodal model</div>
+<div class="en-def">An ML model designed to handle multiple types of data modalities, such as text, images, audio, and video.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình ML được thiết kế để xử lý nhiều loại phương thức dữ liệu như văn bản, hình ảnh, âm thanh và video. Ví dụ: GPT-4o xử lý cả văn bản và hình ảnh. Frontier AI thường là multimodal.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">multiple annotation</div>
+<div class="en-def">An approach in which labelled data points from multiple annotators are compared.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Phương pháp trong đó các điểm dữ liệu có nhãn từ nhiều người chú thích được so sánh. Mục đích: giảm lỗi và thiên kiến của người chú thích cá nhân. Nhãn cuối = đa số hoặc đồng thuận. Thuật ngữ AI đặc thù trong CT-AI glossary.</div>
+</div>
+
+<div class="section-title">🔤 N</div>
+<div class="term-block">
+<div class="en-term">narrow AI</div>
+<div class="en-def">AI focused on a single well-defined task to address a specific problem. <em>Synonym: weak AI. (ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>AI tập trung vào một tác vụ được xác định rõ ràng để giải quyết một vấn đề cụ thể. Đồng nghĩa: weak AI. TẤT CẢ AI hiện tại là Narrow AI. Không thể tổng quát hóa sang tác vụ khác mà không được đào tạo lại.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">natural language processing (NLP)</div>
+<div class="en-def">A field of computing that provides the ability to read, understand, and derive meaning from natural languages.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Lĩnh vực điện toán cung cấp khả năng đọc, hiểu và rút ra ý nghĩa từ ngôn ngữ tự nhiên. Ứng dụng: phân tích cảm xúc, dịch máy, chatbot, LLM. Nền tảng cho Transformer và LLM.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">neural network</div>
+<div class="en-def">A network of primitive processing elements connected by weighted links with adjustable weights, in which each element produces a value by applying a nonlinear function to its input values, and transmits it to other elements or presents it as an output value. <em>Synonym: artificial neural network. (ISO/IEC 2382)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mạng lưới các phần tử xử lý nguyên thủy được kết nối bằng các liên kết có trọng số điều chỉnh được, trong đó mỗi phần tử tạo ra giá trị bằng cách áp dụng hàm phi tuyến lên các giá trị đầu vào. Đồng nghĩa: mạng nơ-ron nhân tạo.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">neuromorphic processor</div>
+<div class="en-def">An integrated circuit designed to mimic the biological neurons of the human brain.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mạch tích hợp được thiết kế để mô phỏng các nơ-ron sinh học của não người. Không sử dụng kiến trúc von Neumann truyền thống. Hiện vẫn đang trong giai đoạn phát triển — chưa được triển khai rộng rãi.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">neuron</div>
+<div class="en-def">A node in a neural network, usually receiving multiple input values and generating an activation value.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một nút trong mạng nơ-ron, thường nhận nhiều giá trị đầu vào và tạo ra một giá trị kích hoạt. Tính toán: activation_value = activation_function(tổng trọng số đầu vào + bias).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">noise</div>
+<div class="en-def">A distortion or corruption in data.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Biến dạng hoặc hỏng hóc trong dữ liệu. Trong adversarial examples: nhiễu nhỏ được thêm có chủ đích vào dữ liệu đầu vào để đánh lừa mô hình, thường không nhìn thấy được bằng mắt thường.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">non-determinism</div>
+<div class="en-def">A property of a system or process in which an outcome is not uniquely determined by its initial conditions.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thuộc tính của hệ thống hoặc quá trình trong đó kết quả không được xác định duy nhất bởi các điều kiện ban đầu. Thách thức an toàn AI số 2. Ngay cả hệ thống bị khóa cũng có thể phi tất định do float/GPU.</div>
+</div>
+
+<div class="section-title">🔤 O</div>
+<div class="term-block">
+<div class="en-term">outlier</div>
+<div class="en-def">An observation that lies outside the overall pattern of the data distribution.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Quan sát nằm ngoài mẫu tổng thể của phân phối dữ liệu. Xử lý trong EDA và data cleaning: có thể cắt, loại bỏ hoặc biến đổi. Đôi khi là dữ liệu hợp lệ quan trọng, không nên loại bỏ mù quáng.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">overfitting</div>
+<div class="en-def">The generation of an ML model that corresponds too closely to the training dataset, resulting in a model that finds it difficult to generalize to new data. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Việc tạo ra mô hình ML tương ứng quá chặt chẽ với tập dữ liệu huấn luyện, dẫn đến mô hình khó tổng quát hóa với dữ liệu mới. Phát hiện: training accuracy cao, test accuracy thấp (khoảng cách lớn). Giảm thiểu: regularization, dropout, early stopping.</div>
+</div>
+
+<div class="section-title">🔤 P</div>
+<div class="term-block">
+<div class="en-term">perceptron</div>
+<div class="en-def">A neural network with just one layer and one neuron.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mạng nơ-ron chỉ có một lớp và một nơ-ron. Mạng nơ-ron đơn giản nhất — bộ phân loại nhị phân cho bài toán phân tách tuyến tính. Nền tảng lịch sử của deep learning.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">precision</div>
+<div class="en-def">An ML functional performance metric used to evaluate a classifier, which measures the proportion of predicted positives that were correct. <em>(After ISO/IEC TR 29119-11)</em><br><br>Formula: <strong>TP / (TP + FP)</strong></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Chỉ số hiệu suất chức năng ML đánh giá bộ phân loại, đo lường tỷ lệ dương tính dự đoán là đúng. Công thức: TP / (TP + FP). Dùng khi FP tốn kém (cảnh báo nhầm gây hại). Mẫu số chứa FP.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">pretrained model</div>
+<div class="en-def">An ML model that has already been trained on a large, general-purpose dataset and can be reused or fine-tuned for specific tasks.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Mô hình ML đã được huấn luyện trên tập dữ liệu lớn, đa năng và có thể tái sử dụng hoặc tinh chỉnh cho các tác vụ cụ thể. Rủi ro kiểm thử chính: inherited limitations (thiên kiến kế thừa, kiến thức lỗi thời, xuất xứ dữ liệu không rõ).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">probabilistic</div>
+<div class="en-def">Behavior described in terms of probabilities, where outcomes are uncertain and described by likelihoods rather than certainty.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hành vi được mô tả theo xác suất, trong đó kết quả không chắc chắn và được mô tả bởi khả năng xảy ra hơn là sự chắc chắn. Lý do AI cần statistical testing thay vì deterministic testing.</div>
+</div>
+
+<div class="section-title">🔤 R</div>
+<div class="term-block">
+<div class="en-term">random forest</div>
+<div class="en-def">Ensemble ML technology for classification, ML regression and other tasks that operate by constructing and running many decision trees and then either outputting the mode of the class or the mean prediction of the individual trees.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Công nghệ ML tổng hợp cho phân loại, hồi quy ML và các tác vụ khác, hoạt động bằng cách xây dựng và chạy nhiều cây quyết định, sau đó xuất ra lớp phổ biến nhất hoặc dự đoán trung bình. Ít overfitting hơn cây quyết định đơn lẻ.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">recall</div>
+<div class="en-def">An ML functional performance metric used to evaluate a classifier, which measures the proportion of actual positives that were predicted correctly. <em>Synonym: sensitivity. (After ISO/IEC TR 29119-11)</em><br><br>Formula: <strong>TP / (TP + FN)</strong></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Chỉ số hiệu suất chức năng ML đánh giá bộ phân loại, đo lường tỷ lệ dương tính thực tế được dự đoán đúng. Đồng nghĩa: sensitivity (độ nhạy). Công thức: TP / (TP + FN). Dùng khi FN tốn kém (bỏ sót nguy hiểm). Mẫu số chứa FN.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">recurrent neural network (RNN)</div>
+<div class="en-def">A type of deep learning model designed to process sequential data, enabling it to recognize patterns and dependencies over time.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại mô hình deep learning được thiết kế để xử lý dữ liệu tuần tự, nhận dạng các mẫu và sự phụ thuộc theo thời gian. Ứng dụng: dịch ngôn ngữ, nhận dạng giọng nói, dự đoán chuỗi thời gian.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">reinforcement learning</div>
+<div class="en-def">An approach in which an ML model, known as an agent, learns by using a trial-and-reward feedback loop with its environment to achieve specific objectives.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Phương pháp trong đó mô hình ML (tác nhân thông minh) học bằng cách sử dụng vòng phản hồi thử-thưởng với môi trường để đạt mục tiêu. Không cần tập dữ liệu có nhãn. Ứng dụng: robot, xe tự lái, game AI.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">retrieval-augmented generation (RAG)</div>
+<div class="en-def">An ML technique where a GenAI system dynamically improves its output by retrieving relevant external information to supplement its internal knowledge.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật ML trong đó hệ thống GenAI cải thiện động đầu ra bằng cách truy xuất thông tin bên ngoài liên quan để bổ sung kiến thức nội bộ. Không thay đổi trọng số mô hình (khác fine-tuning). Thêm ngữ cảnh tại query time.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">reward function</div>
+<div class="en-def">A function that defines the success of reinforcement learning.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hàm xác định sự thành công của reinforcement learning — định nghĩa phần thưởng/phạt cho mỗi hành động của tác nhân. Thiết kế hàm phần thưởng kém → reward hacking.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">reward hacking</div>
+<div class="en-def">The activity performed by an intelligent agent to maximize its reward function to the detriment of meeting the original objective. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hoạt động được thực hiện bởi tác nhân thông minh để tối đa hóa hàm phần thưởng gây bất lợi cho việc đáp ứng mục tiêu ban đầu. Ví dụ: tác nhân trong trò chơi tìm cách khai thác lỗi để tích điểm thay vì chơi đúng luật.</div>
+</div>
+
+<div class="section-title">🔤 S</div>
+<div class="term-block">
+<div class="en-term">search algorithm</div>
+<div class="en-def">An algorithm that systematically visits a subset of all possible states or structures until the goal state or structure is reached. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thuật toán hệ thống duyệt qua một tập con của tất cả các trạng thái hoặc cấu trúc có thể cho đến khi đạt được trạng thái hoặc cấu trúc mục tiêu. Ứng dụng: điều hướng, tối ưu hóa, game.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">self-learning system</div>
+<div class="en-def">An adaptive system that changes its behavior based on learning through trial and error.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Hệ thống thích nghi thay đổi hành vi dựa trên học qua thử-sai. Thách thức an toàn AI số 3: đảm bảo an toàn bị suy yếu vì hành vi hệ thống rời xa trạng thái đã được kiểm thử ban đầu.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">sensitive attributes</div>
+<div class="en-def">Characteristics that define legally or ethically protected groups and individuals that must be controlled to prevent discrimination.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Các đặc điểm xác định các nhóm và cá nhân được bảo vệ về mặt pháp lý hoặc đạo đức, phải được kiểm soát để ngăn ngừa phân biệt đối xử. Ví dụ: chủng tộc, giới tính, tuổi, tôn giáo. Dùng trong disparate impact analysis.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">sentiment analysis</div>
+<div class="en-def">The use of natural language processing and machine learning to identify and classify the emotional tone expressed in text.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Việc sử dụng xử lý ngôn ngữ tự nhiên và machine learning để xác định và phân loại giọng điệu cảm xúc được thể hiện trong văn bản. Ví dụ: phân loại đánh giá sản phẩm là tích cực/tiêu cực/trung lập.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">stratified sampling</div>
+<div class="en-def">A technique to confirm if a sample proportionally represents different sub-populations within the overall population.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kỹ thuật để xác nhận xem mẫu có đại diện tương xứng cho các tiểu nhóm khác nhau trong tổng thể không. Dùng trong k-fold stratified splitting để đảm bảo mỗi phần duy trì phân phối lớp như tập gốc.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">super AI</div>
+<div class="en-def">A type of AI that far exceeds human capabilities.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Loại AI vượt xa khả năng của con người. Chưa tồn tại. Liên quan: technological singularity — điểm tương lai khi tiến bộ công nghệ không còn kiểm soát được. Phổ: Narrow AI → General AI → Super AI.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">supervised learning</div>
+<div class="en-def">An approach to training an ML model by using a labeled dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Phương pháp huấn luyện mô hình ML bằng cách sử dụng tập dữ liệu có nhãn. Mỗi ví dụ huấn luyện có đầu vào + nhãn đúng. Hai hình thức: classification (đầu ra rời rạc) và ML regression (đầu ra liên tục).</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">support vector machine (SVM)</div>
+<div class="en-def">A supervised ML algorithm that finds the optimal hyperplane between data points for classification or ML regression tasks.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thuật toán ML có giám sát tìm siêu phẳng tối ưu giữa các điểm dữ liệu cho phân loại hoặc hồi quy ML. Hiệu quả cho dữ liệu chiều cao và bài toán phân tách tuyến tính/phi tuyến.</div>
+</div>
+
+<div class="section-title">🔤 T</div>
+<div class="term-block">
+<div class="en-term">technological singularity</div>
+<div class="en-def">A point in the future when technological advances are no longer controllable by people. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Một điểm trong tương lai khi các tiến bộ công nghệ không còn kiểm soát được bởi con người. Thường liên quan đến viễn cảnh Super AI tự cải thiện bản thân. Khái niệm lý thuyết, chưa xảy ra.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">temperature</div>
+<div class="en-def">A setting controlling the randomness of GenAI outputs, with lower values generating more predictable results and higher values generating more creative results.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Cài đặt kiểm soát tính ngẫu nhiên của đầu ra GenAI: giá trị thấp hơn tạo ra kết quả dự đoán được hơn, giá trị cao hơn tạo ra kết quả sáng tạo hơn. Là một trong các tham số gây ra "input explosion problem" khi kiểm thử GenAI.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">test oracle problem</div>
+<div class="en-def">The challenge of determining whether a test has passed or failed for a given set of test inputs and state.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Thách thức xác định liệu kiểm thử có đạt hay không đối với một tập đầu vào và trạng thái kiểm thử nhất định. 4 nguyên nhân: phát triển khám phá, độ phức tạp, tính chủ quan, tự học. 6 giải pháp: output bounds, environmental bounds, expert consultation, statistical, specialized testing, proxy oracle.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">training dataset</div>
+<div class="en-def">A dataset used to train an ML model.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Tập dữ liệu được dùng để huấn luyện mô hình ML — trọng số được điều chỉnh dựa trên tập này. Thường ~70% của tổng dữ liệu. Sử dụng dữ liệu kiểm thử trong huấn luyện = thiên lệch lạc quan.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">transformer</div>
+<div class="en-def">A neural network architecture that processes sequential data to capture long-range dependencies, powering NLP tasks, computer vision and multimodal applications.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Kiến trúc mạng nơ-ron xử lý dữ liệu tuần tự để nắm bắt các phụ thuộc tầm xa, hỗ trợ các tác vụ NLP, thị giác máy tính và ứng dụng đa phương thức. Nền tảng của LLM (GPT, BERT, Claude). Cơ chế: self-attention.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">true negative (TN)</div>
+<div class="en-def">A prediction in which the model correctly predicts the negative class.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Dự đoán trong đó mô hình dự đoán đúng lớp âm tính (mô hình nói "không" và thực sự là "không"). Ô màu xanh trong confusion matrix. Xuất hiện trong tử số và mẫu số của Accuracy.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">true positive (TP)</div>
+<div class="en-def">A prediction in which the model correctly predicts the positive class.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Dự đoán trong đó mô hình dự đoán đúng lớp dương tính (mô hình nói "có" và thực sự là "có"). Ô màu xanh trong confusion matrix. Xuất hiện trong tử số của Accuracy, Precision và Recall.</div>
+</div>
+
+<div class="section-title">🔤 U</div>
+<div class="term-block">
+<div class="en-term">underfitting</div>
+<div class="en-def">The generation of an ML model that does not reflect the underlying trend of the training dataset, resulting in a model that makes inaccurate predictions. <em>(After ISO/IEC TR 29119-11)</em></div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Việc tạo ra mô hình ML không phản ánh xu hướng cơ bản của tập dữ liệu huấn luyện, dẫn đến dự đoán không chính xác. Phát hiện: cả training accuracy lẫn test accuracy đều thấp. Giảm thiểu: mô hình phức tạp hơn, nhiều dữ liệu hơn, ít regularization hơn.</div>
+</div>
+
+<div class="term-block">
+<div class="en-term">unsupervised learning</div>
+<div class="en-def">An approach to training an ML model by using an unlabeled dataset.</div>
+<div class="vi-def"><span class="vi-label">🇻🇳 Tiếng Việt:</span><br>Phương pháp huấn luyện mô hình ML bằng cách sử dụng tập dữ liệu không có nhãn. Mô hình tự tìm các mẫu và cấu trúc ẩn. Hai hình thức chính: clustering (phân cụm) và association (liên kết).</div>
+</div>
+
+<div class="section-title">📋 Bảng viết tắt — Chapter 8</div>
+<div style="background:#1a1f2e;border:1px solid #2d3748;border-radius:8px;padding:.8rem 1rem;margin-bottom:1.2rem;">
+<table class="styled" style="font-size:.85rem;">
+<thead><tr><th>Viết tắt</th><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead>
+<tbody>
+<tr><td><strong>AI</strong></td><td>artificial intelligence</td><td>trí tuệ nhân tạo</td></tr>
+<tr><td><strong>AIaaS</strong></td><td>AI as a service</td><td>AI dưới dạng dịch vụ</td></tr>
+<tr><td><strong>API</strong></td><td>application programming interface</td><td>giao diện lập trình ứng dụng</td></tr>
+<tr><td><strong>CL</strong></td><td>confidence level</td><td>mức độ tin cậy</td></tr>
+<tr><td><strong>CNN</strong></td><td>convolutional neural network</td><td>mạng nơ-ron tích chập</td></tr>
+<tr><td><strong>CPU</strong></td><td>central processing unit</td><td>bộ xử lý trung tâm</td></tr>
+<tr><td><strong>DL</strong></td><td>deep learning</td><td>học sâu</td></tr>
+<tr><td><strong>DNN</strong></td><td>deep neural network</td><td>mạng nơ-ron sâu</td></tr>
+<tr><td><strong>EDA</strong></td><td>exploratory data analysis</td><td>phân tích dữ liệu khám phá</td></tr>
+<tr><td><strong>FN</strong></td><td>false negative</td><td>âm tính giả / bỏ sót</td></tr>
+<tr><td><strong>FP</strong></td><td>false positive</td><td>dương tính giả / báo động giả</td></tr>
+<tr><td><strong>GAN</strong></td><td>generative adversarial network</td><td>mạng đối nghịch tạo sinh</td></tr>
+<tr><td><strong>GenAI</strong></td><td>generative AI</td><td>AI tạo sinh</td></tr>
+<tr><td><strong>GPU</strong></td><td>graphics processing unit</td><td>bộ xử lý đồ họa</td></tr>
+<tr><td><strong>IAA</strong></td><td>inter-annotator agreement</td><td>thỏa thuận giữa người chú thích</td></tr>
+<tr><td><strong>kMNC</strong></td><td>k-multisection neuron coverage</td><td>bao phủ nơ-ron k phần</td></tr>
+<tr><td><strong>LIME</strong></td><td>Local Interpretable Model-Agnostic Explanations</td><td>giải thích mô hình cục bộ</td></tr>
+<tr><td><strong>LLM</strong></td><td>large language model(s)</td><td>mô hình ngôn ngữ lớn</td></tr>
+<tr><td><strong>ML</strong></td><td>machine learning</td><td>học máy</td></tr>
+<tr><td><strong>MLS</strong></td><td>machine learning system(s)</td><td>hệ thống học máy</td></tr>
+<tr><td><strong>MoE</strong></td><td>margin of error</td><td>biên độ sai số</td></tr>
+<tr><td><strong>NBC</strong></td><td>neuron boundary coverage</td><td>bao phủ ranh giới nơ-ron</td></tr>
+<tr><td><strong>NLP</strong></td><td>natural language processing</td><td>xử lý ngôn ngữ tự nhiên</td></tr>
+<tr><td><strong>RAG</strong></td><td>retrieval-augmented generation</td><td>tạo sinh tăng cường truy xuất</td></tr>
+<tr><td><strong>RNN</strong></td><td>recurrent neural network</td><td>mạng nơ-ron hồi quy</td></tr>
+<tr><td><strong>SVM</strong></td><td>support vector machine</td><td>máy vector hỗ trợ</td></tr>
+<tr><td><strong>TN</strong></td><td>true negative</td><td>âm tính thật</td></tr>
+<tr><td><strong>TP</strong></td><td>true positive</td><td>dương tính thật</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 </div><!-- end container -->
 <footer>
   <p>ISTQB® CT-AI v2.0 · 10-Day Intensive Exam Preparation Roadmap · © 2026 Compiled for educational purposes from official ISTQB® and ASTQB® materials</p>
