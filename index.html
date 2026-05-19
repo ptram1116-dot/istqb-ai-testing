@@ -263,28 +263,54 @@ table.styled tr:nth-child(even){background:#f9f9f9;}
 </div>
 
 <div class="term-block">
-<div class="en-term">⑤ Generative AI (GenAI) &amp; Large Language Models (AI-1.1.4)</div>
+<div class="en-term">⑤ Generative AI (GenAI), LLM &amp; Foundation Models (§1.1.4 · AI-1.1.4 K2)</div>
 <div class="en-def">
-<strong>Generative AI (GenAI)</strong>: Builds on deep learning technologies to <em>create new content</em> — text, images, audio, code, video. Unlike traditional AI which classifies or predicts from existing data, GenAI generates novel outputs.<br><br>
-<strong>Large Language Model (LLM)</strong>: The driving technology behind most text-based GenAI. Combines <em>Deep Neural Networks (DNN)</em> with <em>Natural Language Processing (NLP)</em> to analyze and generate human-like language. Examples: GPT-4, Claude, Gemini, LLaMA.<br><br>
-<strong>Key testing challenge — The Input Explosion Problem</strong>: Testing GenAI is harder than conventional AI because inputs can be highly diverse and complex:<br>
-&nbsp;&nbsp;• <em>System prompts</em>: instructions configuring the model's behavior<br>
-&nbsp;&nbsp;• <em>User prompts</em>: can contain enormous amounts of disparate data<br>
-&nbsp;&nbsp;• <em>Parameters</em>: temperature (controls randomness), max tokens (output length limit), etc.<br>
-&nbsp;&nbsp;• <em>Context window</em>: retains previous conversation turns — also affects output<br>
-All of these combinations make exhaustive testing practically impossible.<br><br>
-<em>📌 Example:</em> Asking ChatGPT "Write a poem about autumn" could produce thousands of different valid answers — none of them "wrong" in a traditional sense. How do you define the expected output? This is the test oracle problem amplified by the input explosion problem.
+<strong>Generative AI (GenAI)</strong> — §1.1.4: AI systems <em>specialized in creating new content</em> such as text, images, video, music, or complex data. Many also support classification and prediction. These systems learn from vast amounts of data to produce outputs that resemble their training data.<br><br>
+
+<strong>Three core technologies behind GenAI (§1.1.4 — must know for exam):</strong>
+<table class="styled"><thead><tr><th>Technology</th><th>How it works</th><th>Typical outputs</th></tr></thead><tbody>
+<tr><td><strong>GAN</strong><br>(Generative Adversarial Network)</td><td>Two neural networks compete: <em>generator</em> creates synthetic data, <em>discriminator</em> distinguishes real from fake. They improve each other.</td><td>Realistic images, deepfakes, synthetic training data</td></tr>
+<tr><td><strong>Diffusion Models</strong></td><td>Gradually add noise to data, then learn to <em>remove</em> it. The denoising process generates high-quality outputs.</td><td>DALL-E / Stable Diffusion images; audio synthesis</td></tr>
+<tr><td><strong>Transformers</strong></td><td>Use <em>self-attention mechanisms</em> to capture long-range dependencies. Underpin LLMs; adapted for multimodal tasks.</td><td>LLMs (GPT, Claude, Gemini); vision transformers</td></tr>
+</tbody></table><br>
+
+<strong>Large Language Model (LLM)</strong>: A text-to-text GenAI system trained on very large collections of language data. Built on transformer architecture + NLP.<br><br>
+
+<strong>Foundation Models</strong>: Large-scale ML models trained on vast datasets using <em>self-supervised learning</em>. Designed as a versatile base that can be <em>fine-tuned</em> or adapted to a wide range of tasks across different domains without retraining from scratch.<br><br>
+
+<strong>Retrieval-Augmented Generation (RAG)</strong>: A technique where a GenAI system improves its output by retrieving relevant external information at query time. <em>No changes are made to the pre-trained model's weights</em> — key distinction from fine-tuning.<br><br>
+
+<strong>Societal &amp; Ethical Concerns (§1.1.4 — K2 examinable):</strong>
+<ul style="margin:4px 0 4px 1.2rem;line-height:1.9;">
+<li><strong>Deepfakes &amp; misinformation</strong>: GenAI can create convincing synthetic media — undermining trust in digital content and public discourse</li>
+<li><strong>Privacy &amp; security</strong>: ease of generating convincing fraudulent content amplifies manipulation risks</li>
+<li><strong>Employment impact</strong>: automates writing, design, coding, legal/medical documentation → potential job displacement and widespread reskilling</li>
+<li><strong>Sustainability</strong>: training large GenAI models requires substantial compute → high energy consumption and significant carbon footprint</li>
+</ul>
 </div>
 <div class="vi-def"><span class="vi-label">🇻🇳 Giải thích tiếng Việt:</span><br>
-<strong>AI tạo sinh (GenAI)</strong>: Xây dựng trên công nghệ deep learning để <em>tạo ra nội dung mới</em> — văn bản, hình ảnh, âm thanh, mã nguồn, video. Khác với AI truyền thống phân loại hoặc dự đoán từ dữ liệu có sẵn, GenAI tạo ra các đầu ra hoàn toàn mới.<br><br>
-<strong>Mô hình ngôn ngữ lớn (LLM)</strong>: Công nghệ cốt lõi đằng sau hầu hết GenAI dựa trên văn bản. Kết hợp <em>Mạng nơ-ron sâu (DNN)</em> với <em>Xử lý ngôn ngữ tự nhiên (NLP)</em> để phân tích và tạo ra ngôn ngữ giống con người. Ví dụ: GPT-4, Claude, Gemini, LLaMA.<br><br>
-<strong>Thách thức kiểm thử chính — Bài toán Bùng nổ Đầu vào</strong>: Kiểm thử GenAI khó hơn AI thông thường vì đầu vào có thể rất đa dạng và phức tạp:<br>
-&nbsp;&nbsp;• <em>System prompts</em>: hướng dẫn cấu hình hành vi của mô hình<br>
-&nbsp;&nbsp;• <em>User prompts</em>: có thể chứa lượng dữ liệu khổng lồ và đa dạng<br>
-&nbsp;&nbsp;• <em>Các tham số</em>: temperature (kiểm soát tính ngẫu nhiên), max tokens (giới hạn độ dài đầu ra), v.v.<br>
-&nbsp;&nbsp;• <em>Cửa sổ ngữ cảnh</em>: lưu giữ các lượt hội thoại trước — cũng ảnh hưởng đến đầu ra<br>
-Tất cả các tổ hợp này khiến việc kiểm thử đầy đủ gần như không thể thực hiện được.<br><br>
-<em>📌 Ví dụ minh họa:</em> Hỏi ChatGPT "Viết một bài thơ về mùa thu" có thể tạo ra hàng nghìn câu trả lời hợp lệ khác nhau — không cái nào "sai" theo nghĩa truyền thống. Làm thế nào để xác định đầu ra mong đợi? Đây là bài toán test oracle được khuếch đại bởi bài toán bùng nổ đầu vào.
+<strong>AI tạo sinh (GenAI) — §1.1.4</strong>: Hệ thống AI chuyên <em>tạo ra nội dung mới</em> như văn bản, hình ảnh, video, âm thanh. Học từ lượng dữ liệu khổng lồ để tạo đầu ra tương tự dữ liệu huấn luyện. Nhiều hệ thống còn hỗ trợ phân loại và dự đoán.<br><br>
+
+<strong>3 công nghệ cốt lõi (§1.1.4 — bắt buộc cho kỳ thi):</strong><br>
+<table class="styled" style="font-size:.85rem;"><thead><tr><th>Công nghệ</th><th>Cách hoạt động</th><th>Ứng dụng</th></tr></thead><tbody>
+<tr><td><strong>GAN</strong></td><td>2 mạng cạnh tranh: <em>generator</em> tạo dữ liệu giả, <em>discriminator</em> phân biệt thật/giả. Cùng cải thiện qua cạnh tranh.</td><td>Hình ảnh siêu thực, deepfake, dữ liệu tổng hợp</td></tr>
+<tr><td><strong>Diffusion Models</strong></td><td>Dần thêm nhiễu vào dữ liệu, sau đó học cách <em>loại bỏ nhiễu</em> → tạo nội dung chất lượng cao.</td><td>DALL-E, Stable Diffusion; tổng hợp âm thanh</td></tr>
+<tr><td><strong>Transformers</strong></td><td>Dùng <em>self-attention</em> xử lý phụ thuộc tầm xa trong chuỗi. Nền tảng của LLM, đang mở rộng cho đa phương thức.</td><td>GPT, Claude, Gemini; vision transformers</td></tr>
+</tbody></table><br>
+
+<strong>LLM (Large Language Model)</strong>: Hệ thống GenAI văn bản→văn bản, huấn luyện trên dữ liệu ngôn ngữ rất lớn. Dựa trên kiến trúc Transformer + NLP.<br><br>
+
+<strong>Foundation Model</strong>: Mô hình quy mô lớn huấn luyện bằng <em>self-supervised learning</em> trên dữ liệu khổng lồ. Nền tảng linh hoạt có thể fine-tune cho nhiều tác vụ khác nhau mà không cần train lại từ đầu.<br><br>
+
+<strong>RAG (Retrieval-Augmented Generation)</strong>: GenAI truy xuất thông tin ngoài tại query time → cải thiện đầu ra mà <em>không thay đổi trọng số mô hình</em>. Khác với fine-tuning (thay đổi trọng số).<br><br>
+
+<strong>Mối lo ngại xã hội &amp; đạo đức (§1.1.4 — K2 có thể ra thi):</strong>
+<ul style="margin:4px 0 4px 1.2rem;line-height:1.9;">
+<li><strong>Deepfake &amp; thông tin sai lệch</strong>: GenAI tạo nội dung giả mạo thuyết phục → suy yếu niềm tin vào nội dung số và diễn ngôn công cộng</li>
+<li><strong>Quyền riêng tư &amp; bảo mật</strong>: dễ tạo nội dung gian lận → khuếch đại rủi ro thao túng</li>
+<li><strong>Tác động việc làm</strong>: tự động hóa viết lách, thiết kế, lập trình, tài liệu pháp lý/y tế → tranh luận về thay thế việc làm và cần đào tạo lại rộng rãi</li>
+<li><strong>Bền vững</strong>: huấn luyện mô hình lớn tiêu thụ năng lượng và tài nguyên tính toán khổng lồ → carbon footprint cao</li>
+</ul>
 </div>
 </div>
 
@@ -331,9 +357,35 @@ Tất cả các tổ hợp này khiến việc kiểm thử đầy đủ gần n
 
 <div class="question-block"><div class="q-header"><span class="q-num">Q15</span><span class="q-points">1 pt · K2</span><div class="q-text">A factory quality control system uses video cameras and audio analysis to identify faulty manufactured items by monitoring a human quality control operative. Which ML form does this BEST represent?</div></div><ul class="options"><li onclick="selectOption(this)">a) Reinforcement learning — the system receives rewards for correctly identifying faulty items</li><li onclick="selectOption(this)">b) Unsupervised learning — the system groups items without predefined categories</li><li onclick="selectOption(this)">c) Supervised learning — the system learns from the labeled behavior of the human operative</li><li onclick="selectOption(this)">d) Association learning — the system finds dependencies between video and audio features</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: c)</div><div class="ans-vi">Đáp án đúng: c) Học có giám sát — hành động của người vận hành cung cấp các nhãn (lỗi/không lỗi)</div><div class="just">The system learns by observing a human operative whose actions provide labeled training data (faulty/not faulty). This is supervised learning from the official CT-AI v1.1 sample exam (AI-1.1.3 K2).</div></div></div>
 
-<div class="question-block"><div class="q-header"><span class="q-num">Q16</span><span class="q-points">1 pt · K2</span><div class="q-text">Which of the following BEST describes 'quantization' as used in ML hardware optimization?</div></div><ul class="options"><li onclick="selectOption(this)">a) Grouping similar model weights into clusters to reduce memory footprint</li><li onclick="selectOption(this)">b) Using fewer bits for computation (e.g., 4 bits instead of 32 bits), resulting in faster processing, lower power consumption, and reduced bandwidth requirements</li><li onclick="selectOption(this)">c) Splitting a large ML model across multiple GPUs for distributed training</li><li onclick="selectOption(this)">d) Converting a continuous neural network output into a discrete classification label</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: b)</div><div class="ans-vi">Đáp án đúng: b) Sử dụng ít bit hơn cho tính toán (ví dụ: 4 bit thay vì 32 bit), dẫn đến xử lý nhanh hơn, tiêu thụ điện năng thấp hơn và yêu cầu băng thông giảm — đây là lượng tử hóa (quantization)</div><div class="just">Quantization (low-precision arithmetic) uses fewer bits for computation — e.g., 4 bits instead of 32 bits. This results in faster processing, lower power consumption, smaller and more cost-effective chips, and reduced bandwidth requirements. It is one of the three key ML hardware requirements in the CT-AI v2.0 syllabus §1.1.5 (AI-1.1.5 K2).</div></div></div>
+<div class="question-block">
+<div class="q-header"><span class="q-num">Q16</span><span class="q-points lo-badge">AI-1.1.4 · K2</span><div class="q-text">Which of the following BEST describes the three main technologies behind Generative AI as described in the CT-AI v2.0 syllabus?</div></div>
+<ul class="options">
+<li onclick="selectOption(this)">a) Convolutional neural networks, recurrent neural networks, and support vector machines</li>
+<li onclick="selectOption(this)">b) Generative adversarial networks (GANs), diffusion models, and transformers</li>
+<li onclick="selectOption(this)">c) Bayesian models, decision trees, and random forests</li>
+<li onclick="selectOption(this)">d) Reinforcement learning agents, clustering algorithms, and regression models</li>
+</ul>
+<button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer-key">
+<div class="ans-en">✓ b) Generative adversarial networks (GANs), diffusion models, and transformers<br><small>Syllabus §1.1.4: "The main technologies behind GenAI include generative adversarial networks (GANs), diffusion models, and transformers." (AI-1.1.4 K2)</small></div>
+<div class="ans-vi">Đáp án: b) Ba công nghệ cốt lõi của GenAI theo syllabus §1.1.4: GAN (hai mạng cạnh tranh), Diffusion Models (thêm/loại nhiễu), Transformers (self-attention, nền tảng LLM). CNN/RNN/SVM là công nghệ DL/ML chung, không đặc thù cho GenAI.</div>
+</div>
+</div>
 
-<div class="question-block"><div class="q-header"><span class="q-num">Q17</span><span class="q-points">1 pt · K2</span><div class="q-text">Why do GPUs typically outperform CPUs for ML training even though CPUs usually run at higher clock speeds?</div></div><ul class="options"><li onclick="selectOption(this)">a) GPUs have more advanced cooling systems that allow sustained computation for longer periods</li><li onclick="selectOption(this)">b) GPUs have thousands of cores designed for massively parallel, relatively simple processing, while CPUs have only a few cores suited for complex sequential tasks</li><li onclick="selectOption(this)">c) GPUs have access to larger RAM banks that can store the entire training dataset in memory</li><li onclick="selectOption(this)">d) GPUs use a specialized instruction set that is natively optimized for gradient descent algorithms</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: b)</div><div class="ans-vi">Đáp án đúng: b) GPU có hàng nghìn nhân được thiết kế cho xử lý song song quy mô lớn, tương đối đơn giản, trong khi CPU chỉ có vài nhân phù hợp cho các tác vụ tuần tự phức tạp — do đó GPU vượt trội trong ML dù CPU có tốc độ đồng hồ cao hơn</div><div class="just">The CT-AI syllabus §1.1.5 states: "CPUs provide support for complex operations with high precision, but provide only a few cores. GPUs have thousands of cores and are designed to perform massively parallel, relatively simple, graphics processing. Consequently, GPUs typically outperform CPUs in ML applications, even though CPUs usually run at higher clock speeds." (AI-1.1.5 K2).</div></div></div>
+<div class="question-block">
+<div class="q-header"><span class="q-num">Q17</span><span class="q-points lo-badge">AI-1.1.4 · K2</span><div class="q-text">A development team wants to adapt a pre-trained LLM to answer questions about their company's internal product documentation. They need the model to use their specific documents but do NOT want to change the model's weights. Which approach is MOST appropriate?</div></div>
+<ul class="options">
+<li onclick="selectOption(this)">a) Fine-tuning — retrain all layers of the LLM with the product documentation</li>
+<li onclick="selectOption(this)">b) Training from scratch — build a new LLM using only the product documentation</li>
+<li onclick="selectOption(this)">c) Retrieval-Augmented Generation (RAG) — provide the documents as an external data source at query time</li>
+<li onclick="selectOption(this)">d) Prompt engineering only — include the entire documentation in the system prompt</li>
+</ul>
+<button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer-key">
+<div class="ans-en">✓ c) Retrieval-Augmented Generation (RAG)<br><small>RAG provides data sources specific to the task without changing the pre-trained model's weights — the key distinction from fine-tuning (AI-1.1.4, §3.1.4 K2)</small></div>
+<div class="ans-vi">Đáp án: c) RAG — truy xuất tài liệu liên quan tại query time, không thay đổi trọng số mô hình. Fine-tuning (a) thay đổi trọng số. Training from scratch (b) tốn kém và không cần thiết. System prompt (d) có giới hạn context window. RAG là lựa chọn đúng khi muốn dùng dữ liệu riêng mà không thay đổi mô hình.</div>
+</div>
+</div>
 
 <div class="question-block"><div class="q-header"><span class="q-num">Q18</span><span class="q-points">1 pt · K2</span><div class="q-text">Which of the following is an example of unsupervised learning association?</div></div><ul class="options"><li onclick="selectOption(this)">a) Predicting whether a loan application will be approved based on labeled historical data</li><li onclick="selectOption(this)">b) Grouping customers into different segments based on demographic similarity</li><li onclick="selectOption(this)">c) Finding patterns in customer purchasing behavior to recommend products</li><li onclick="selectOption(this)">d) An intelligent agent learning to play chess through winning and losing games</li></ul><button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button><div class="answer-key"><div class="ans-en">✓ Correct Answer: c)</div><div class="ans-vi">Đáp án đúng: c) Tìm các mẫu trong hành vi mua hàng để đề xuất sản phẩm — đây là ví dụ điển hình của kết hợp trong học không giám sát</div><div class="just">Association in unsupervised learning identifies relationships and dependencies among data attributes, such as finding patterns in customer purchasing behavior to recommend products (market basket analysis) (AI-1.1.3 K2).</div></div></div>
 
